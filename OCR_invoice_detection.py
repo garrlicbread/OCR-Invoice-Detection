@@ -17,7 +17,7 @@ import cv2
 import pytesseract 
 import numpy as np
 
-Query = cv2.imread("C:/Users/Sukant Sidnhwani/Desktop/Python/Projects/OCR Invoice Detection/Images/Blank Invoice.jpg")
+Query = cv2.imread("C://Desktop/Python/Projects/OCR Invoice Detection/Images/Blank Invoice.jpg")
 # TestImage = cv2.imread("C:/Users/Sukant Sidnhwani/Desktop/Python/Projects/OCR Invoice Detection/Images/Sukant.jpg")
 
 # # Viewing the Query Image
@@ -39,17 +39,13 @@ keypoints, descriptors = orb.detectAndCompute(Query, None)
 # if k == 27:         # wait for ESC key to exit
 #     cv2.destroyAllWindows()
 
-# Region of Interests
-# Instead of manually finding out the bounding box co-ordinates of every single feature,
-# I used a script that automates the process. Link attached for reference
-# https://www.murtazahassan.com/courses/opencv-projects/lesson/complete-code-files/    
+# Initializing region of Interests
 
 Features = [[(369, 123), (875, 209), 'Customer Name'],   # Single Boxes
             [(369, 212), (879, 256), 'Address'], 
             [(369, 318), (874, 363), 'Phone Number'],  
             [(1292, 208), (1508, 260), 'Date'],   
             [(74, 538), (864, 604), 'Description'],
-            # [(874, 554), (1036, 606), 'Quantity'],
             [(1042, 555), (1296, 1198), 'Unit Price'], 
             [(1298, 540), (1508, 602), 'Amount'],
             [(1301, 1201), (1515, 1246), 'Sub Total'],
@@ -59,7 +55,7 @@ Features = [[(369, 123), (875, 209), 'Customer Name'],   # Single Boxes
 
 # Defining a function that resizes an input image using cv2.warpPerspective() and crops areas of interests
 def resize():
-    imagepath = "C:/Users/Sukant Sidnhwani/Desktop/Python/Projects/OCR Invoice Detection/Images"
+    imagepath = "C://Desktop/Python/Projects/OCR Invoice Detection/Images"
     picture = input("Enter name of the image: ")
     image = cv2.imread(imagepath + f"/{picture}")
     w, h, _ = image.shape
