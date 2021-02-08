@@ -1,15 +1,10 @@
 """
-OCR Invoice Detection using OpenCv and PyTesseract v 0.3.4
+OCR Invoice Detection using OpenCv and PyTesseract
 
 Created on Tue Feb 2 13:53:38 2021
 
 @author: Sukant Sindhwani
 """
-
-# # Checking pytesseract version
-# # Version has been downgraded to 0.3.4 for better results
-# import pkg_resources
-# pkg_resources.working_set.by_key['pytesseract'].version
 
 # Importing Libraries
 import re
