@@ -13,7 +13,7 @@ import pytesseract
 import numpy as np
 
 Query = cv2.imread("C://Desktop/Python/Projects/OCR Invoice Detection/Images/Blank Invoice.jpg")
-# TestImage = cv2.imread("C:/Users/Sukant Sidnhwani/Desktop/Python/Projects/OCR Invoice Detection/Images/Sukant.jpg")
+# TestImage = cv2.imread("C://Desktop/Python/Projects/OCR Invoice Detection/Images/Sukant.jpg")
 
 # # Viewing the Query Image
 # h, w, c = Query.shape
