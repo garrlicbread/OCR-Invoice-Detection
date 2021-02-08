@@ -1,3 +1,5 @@
 # Object Character Recognition on an Invoice using OpenCV & PyTesseract
 
-This 
+
+
+![Alt text](InvoiceOCR.gif) 
