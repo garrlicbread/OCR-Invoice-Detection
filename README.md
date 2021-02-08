@@ -1,4 +1,4 @@
-# Object Character Recognition on an Invoice
+# Object Character Recognition (OCR) on an Invoice
 
 ## What it does:
 This is a simple script that extracts text from an invoice using OpenCV and PyTesseract. Enter the name of the person whose invoice you want to extract and the script will detect and print the following elements:
