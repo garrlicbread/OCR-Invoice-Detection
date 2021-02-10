@@ -114,11 +114,7 @@ for i, feature in enumerate(Features):
     # if k == 27:         # wait for ESC key to exit
     #     cv2.destroyAllWindows()
     
-    if feature[2] == "Phone Number":
-        print("{}: {}".format(str(feature[2]), re.sub(r'[^0-9]+', ' ', pytesseract.image_to_string(crop))))
-    
-    else:
-        print("{}: {}".format(str(feature[2]), re.sub(r'[^A-Za-z0-9/%]+', ' ', pytesseract.image_to_string(crop))))
+    print("{}: {}".format(str(feature[2]), re.sub(r'[^A-Za-z0-9/%]+', ' ', pytesseract.image_to_string(crop))))
    
     myfeatures.append(pytesseract.image_to_string(crop))
     myfeatures_clean = [re.sub(r'[^A-Za-z0-9,/%]+', ' ', x) for x in myfeatures]
@@ -131,4 +127,3 @@ cv2.imshow("Detected Features", copy)
 k = cv2.waitKey(0) & 0xFF
 if k == 27:         # wait for ESC key to exit
     cv2.destroyAllWindows()
-    
